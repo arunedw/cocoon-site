@@ -1,27 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root { --font-sans: "Inter Variable"; --font-mono: "JetBrains Mono Variable"; }
+body { @apply bg-paper text-ink antialiased; }
+.label { @apply font-mono text-[13px] uppercase tracking-[0.14em] text-muted; }
+.btn { @apply inline-flex min-h-[44px] items-center justify-center rounded-full px-5 py-2.5 text-[15px] font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy; }
+.btn-primary { @apply btn bg-navy text-white hover:bg-navy-deep; }
+.btn-ghost { @apply btn border border-line bg-white hover:bg-navy-soft; }
+.card { @apply rounded-2xl border border-line bg-white; }
+.container-x { @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12; }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+html { font-size: 17px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #1f3563; outline-offset: 2px; }
+.skip { @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-navy focus:px-4 focus:py-2 focus:text-white; }
