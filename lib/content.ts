@@ -15,7 +15,7 @@ export const content: Record<string, PageContent> = {
     heroImg: "/screens/home-v2.png", heroAlt: "Cocoon teacher home with week view, priorities and students needing support",
     blocks: [
       { label: "Home", title: "Your IB week in one view", body: "Start each day knowing what matters. Lessons, overdue marking, predicted grades and students who need support sit on one screen.", bullets: ["Week, day and month views, with Google Calendar import", "Priorities ranked by due date and urgency", "Students-at-risk flags so no one slips through"], img: "/screens/home-v2.png", alt: "Cocoon home dashboard" },
-      { label: "Plan", title: "Inquiry-led planning in minutes", body: "Pick a topic and learning level. Cocoon drafts inquiry hooks and full lesson decks built on the IB inquiry cycle, ready for you to edit.", bullets: ["MYP unit planner with a 16-section outline", "Inquiry Hooks: 3–4 openers per topic, versioned", "PPT Engine: decks exported to PowerPoint, PDF or Google Slides"], img: "/screens/inquiry-hooks-v2.png", alt: "Inquiry Hooks in Cocoon" },
+      { label: "Plan", title: "Inquiry-led planning in minutes", body: "Pick a topic and learning level. Cocoon drafts inquiry hooks and full lesson decks built on the IB inquiry cycle, ready for you to edit.", bullets: ["MYP unit planner with a 16-section outline", "Inquiry Hooks: 3–4 openers per topic, versioned", "PPT Engine: decks exported to PowerPoint or PDF"], img: "/screens/inquiry-hooks-v2.png", alt: "Inquiry Hooks in Cocoon" },
       { label: "Teach", title: "Teach live and read the room", body: "Run a sectioned lesson blueprint in Teach Studio. A one-tap room pulse tells you when to slow down or go deeper.", img: "/screens/teach-studio-v2.png", alt: "Teach Studio live lesson" },
       { label: "Assess", title: "Criterion-based marking, teacher in control", body: "Cocoon evaluates every response criterion by criterion and strand by strand, citing the evidence for each judgement. You review, adjust and release results when you are ready.", img: "/screens/marking-v2.png", alt: "Cocoon marking inspector" },
       { label: "Reflect", title: "Reflection and ATL logging built in", body: "Capture a quick post-lesson reflection and log ATL skills straight from your home screen, so evidence builds up without extra admin." },
@@ -55,7 +55,7 @@ export const content: Record<string, PageContent> = {
 
   "product/ppt-engine": {
     eyebrow: "PPT Engine",
-    lead: "Pick what to cover and a theme, and Cocoon builds a deck you shape in a planner, polish slide by slide, present full-screen and export to PowerPoint, PDF or Google Slides.",
+    lead: "Pick what to cover and a theme, and Cocoon builds a deck you shape in a planner, polish slide by slide, present full-screen and export to PowerPoint or PDF.",
     heroImg: "/screens/ppt-engine-v2.png", heroAlt: "PPT Engine slide editor with speaker notes and AI refine panel",
     flow: { label: "How it flows", title: "From topics to a deck you can teach", steps: [
       { name: "Create", desc: "Choose the units and topics, the length of the session and a theme." },
@@ -68,11 +68,11 @@ export const content: Record<string, PageContent> = {
       { label: "Themes", title: "A look that fits the subject", body: "The theme sets typography and palette for the whole deck, from clean academic looks like Modern Minimal, Oxford Blue and Classic Serif to distinctive ones like Midnight, Engineering Grid and Lab Notebook. Change it any time without redoing the content." },
       { label: "Planner", title: "Structure first, polish later", body: "The planner is the deck's outline: every slide with the bullets it will cover, editable inline. Getting order and coverage right here is far quicker than rearranging finished slides.", bullets: ["Split a slide that is doing too much", "Merge two thin slides into one", "Insert a slide or a quiz exactly where you need a check", "Delete slides or add one at the end"] },
       { label: "Editor", title: "The slide is the edit surface", body: "Click a title or bullet and type; changes save as you move on. Speaker notes sit below the slide. The Refine panel reworks the active slide from a short instruction, with quick actions like Simplify, Add an example or Insert a quiz.", img: "/screens/ppt-engine-v2.png", alt: "Slide editor with Refine panel" },
-      { label: "Present & share", title: "Teach it, export it, pass it on", body: "Present runs the deck full-screen. Export to PowerPoint (.pptx), PDF or Google Slides. Share by link, directly with a colleague, your subject group lead or the subject group board, or as an email summary, choosing what to include.", bullets: ["Saved decks live in your library", "Duplicate a deck for another class", "Reuse a deck as the starting point for the next lesson"] },
+      { label: "Present & share", title: "Teach it, export it, pass it on", body: "Present runs the deck full-screen. Export to PowerPoint (.pptx) or PDF. Share by link, directly with a colleague, your subject group lead or the subject group board, or as an email summary, choosing what to include.", bullets: ["Saved decks live in your library", "Duplicate a deck for another class", "Reuse a deck as the starting point for the next lesson"] },
     ],
     faqs: [
       { q: "Can I edit the slides, or only generate them?", a: "Fully edit them. Shape the structure in the planner, then edit each slide's title, bullets and notes in the editor. The draft is just a starting point." },
-      { q: "Which formats can I export to?", a: "PowerPoint (.pptx), PDF and Google Slides." },
+      { q: "Which formats can I export to?", a: "PowerPoint (.pptx) and PDF." },
       { q: "Can I change the theme after generating?", a: "Yes. Switch themes any time without redoing the content." },
       { q: "Who is it for?", a: "Teachers building lessons, subject group leads reviewing decks across a team, and principals who want consistent, high-quality materials." },
     ],
@@ -127,11 +127,11 @@ export const content: Record<string, PageContent> = {
 
   "product/ai": {
     eyebrow: "Cocoon AI",
-    lead: "Cocoon's AI is trained on how the IB works, not just on general knowledge. It drafts and suggests in the language of the MYP and DP, and the teacher is always the one who decides.",
+    lead: "Cocoon's AI is built around how the IB works, not just on general knowledge. It drafts and suggests in the language of the MYP and DP, and the teacher is always the one who decides.",
     blocks: [
       { label: "What it does", title: "AI across the teaching workflow", body: "One assistant, shaped for each job.", bullets: ["Drafts inquiry hooks for any curriculum topic and level", "Plans lesson decks on the IB inquiry cycle", "Refines slides: tighten copy, add a diagram, differentiate for MYP or DP readiness, translate", "Suggests criterion bands with strand-level evidence when marking"] },
       { label: "Guardrails", title: "The teacher stays in control", body: "Nothing Cocoon generates reaches students until a teacher approves it. Drafts stay in your library, every regeneration is versioned, and marks are only released by the teacher." },
-      { label: "Data", title: "Your school's data stays your school's", body: "Student work is used to help you mark, not to train public models. See our security page for hosting, access control and data handling." },
+      { label: "Data", title: "Your school's data stays your school's", body: "Student work is used only to support marking in your school. See our security page for hosting, access control and data handling." },
     ],
     faqs: [
       { q: "Is Cocoon just a chatbot wrapper?", a: "No. The AI is built into specific IB workflows with curriculum structure, learning levels and criteria, not a blank chat box." },
@@ -311,5 +311,20 @@ export const content: Record<string, PageContent> = {
       { q: "How do we evaluate Cocoon before committing?", a: "Start with a one-term pilot and review the results with our team." },
     ],
     related: [{ label: "Pilot programme", href: "/pilot" }, { label: "Security & privacy", href: "/security" }, { label: "Pricing", href: "/pricing" }],
+  },
+
+  about: {
+    eyebrow: "About",
+    lead: "Cocoon is built by Edwisely, a Hyderabad-based education technology company founded in 2017 by alumni of IIT Madras and TU Delft. Edwisely builds AI-driven, personalised learning products, and Cocoon brings that experience to IB World Schools.",
+    blocks: [
+      { label: "Our mission", title: "Help every learner reach their full potential", body: "Edwisely builds AI-driven, personalised, high-quality products that transform the way students learn and prepare. Cocoon applies that mission to the IB, giving MYP and DP teachers tools that respect the framework and give time back for teaching." },
+      { label: "Track record", title: "Proven at scale", body: "Edwisely's platforms serve more than 2.1 lakh students and 8,000 faculty across 60+ institutions, with over 2.5 lakh tests delivered.", bullets: ["2017: Edwisely founded in Hyderabad", "2021: TEATAR engine launched, cutting faculty preparation time by 90%", "2022: 7AI multi-dimensional framework deployed", "2024: 2.1 lakh+ students reached across India"] },
+      { label: "Our values", title: "What guides how we work", body: "The same values shape Cocoon and every Edwisely product.", bullets: ["Trust: we operate with honesty and integrity", "Empathy: we make education deeply personal", "Outcomes: we deliver measurable, shared success", "Stakeholders first: we put schools, teachers and students first"] },
+    ],
+    faqs: [
+      { q: "Is Cocoon a separate company?", a: "No. Cocoon is a product of Edwisely, built specifically for IB MYP and DP schools." },
+      { q: "Where is Edwisely based?", a: "Our head office is in Gachibowli, Hyderabad, with teams in Chennai and Texas, USA." },
+    ],
+    related: [{ label: "Contact us", href: "/contact" }, { label: "Why Cocoon", href: "/why-cocoon" }, { label: "Edwisely", href: "https://www.edwisely.com" }],
   },
 };

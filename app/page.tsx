@@ -15,7 +15,7 @@ const faqs = [
   { q: "Is Cocoon only for IB schools?", a: "Yes. Cocoon is built specifically for IB MYP and DP teachers and coordinators." },
   { q: "Our teachers already juggle many tools. Is this one more?", a: "Cocoon replaces several: planning, lesson decks, assessment and evidence in one place, using IB structures teachers already know." },
   { q: "Does the AI grade students on its own?", a: "No. The AI suggests bands with strand-level evidence; teachers make every final decision and control when results are released." },
-  { q: "Can we export plans and decks?", a: "Yes. Unit plans print or save as PDF, and lesson decks export to PowerPoint, PDF or Google Slides." },
+  { q: "Can we export plans and decks?", a: "Yes. Unit plans print or save as PDF, and lesson decks export to PowerPoint or PDF." },
   { q: "Can Cocoon help with accreditation?", a: "Yes. Everyday teaching artefacts are tagged as evidence for IB, CIS and NEASC." },
 ];
 
