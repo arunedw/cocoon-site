@@ -152,12 +152,13 @@ export const content: Record<string, PageContent> = {
     blocks: [
       { label: "Plan", title: "Units shaped like the MYP planner", body: "Plan across Inquiry & action, Unit flow, Evidencing and Reflection, with Key Concepts, global contexts, ATL and objectives built in. Decks and hooks are drafted from the same topics.", img: "/screens/unit-planner-v2.png", alt: "MYP unit planner" },
       { label: "Assess", title: "Criteria A–D with AI assist", body: "Cocoon evaluates against MYP subject criteria strand by strand, with cited evidence and a best-fit band for each criterion. You adjust and release.", img: "/screens/marking-v2.png", alt: "MYP criteria marking" },
+      { label: "Articulate", title: "Vertical and horizontal planning you can see", body: "Map units across MYP 1–5 and across subject groups. See where Key Concepts, global contexts, ATL skills and criteria are covered, and where they are missing, before evaluation asks." },
       { label: "Reflect", title: "ATL and Learner Profile, logged as you go", body: "Quick reflections and ATL logs build a year-long record of skills development for each class." },
     ],
     faqs: [
       { q: "Does Cocoon support all MYP subject groups?", a: "Cocoon is designed for all MYP subject groups. Tell us your mix in a demo and we will show your subjects." },
       { q: "Does it handle MYP command terms?", a: "Yes. Command terms are used in generated tasks and in marking guidance." },
-      { q: "Can coordinators see across units?", a: "Yes. Coordinators can view planning and assessment across subject groups." },
+      { q: "Can we see concept and ATL coverage across MYP years?", a: "Yes. The curriculum map shows how units build across MYP 1–5 and across subject groups, so gaps and repetition are easy to spot." },
     ],
     related: [{ label: "IB DP", href: "/programmes/dp" }, { label: "Assessment", href: "/product/assessment" }, { label: "Accreditation", href: "/accreditation" }],
   },
@@ -250,7 +251,8 @@ export const content: Record<string, PageContent> = {
     ],
     faqs: [
       { q: "Can we switch mid-year?", a: "Yes. We plan around your calendar and can start with a single group to avoid disruption." },
-      { q: "Will teachers need lots of training?", a: "No. Cocoon follows the IB structures teachers already know. Most teachers are productive after a short session." },
+      { q: "Our teachers are tired of new tools. Why add another?", a: "Cocoon replaces several: unit planning, lesson decks, assessment and evidence live in one place. It uses the IB structures teachers already know, so there is little new to learn, and we roll out in small steps." },
+      { q: "Will teachers need lots of training?", a: "No. Most teachers are productive after one short session." },
     ],
     related: [{ label: "Why Cocoon", href: "/why-cocoon" }, { label: "Pilot programme", href: "/pilot" }, { label: "Pricing", href: "/pricing" }],
   },
@@ -273,5 +275,41 @@ export const content: Record<string, PageContent> = {
       { q: "Is there a cost?", a: "Pilot terms depend on scope. Talk to us and we will propose an option." },
     ],
     related: [{ label: "Switching to Cocoon", href: "/switching" }, { label: "Why Cocoon", href: "/why-cocoon" }, { label: "Pricing", href: "/pricing" }],
+  },
+
+  "for-coordinators": {
+    eyebrow: "For MYP & DP coordinators",
+    lead: "Keep units, lessons and assessment aligned across every subject group and year, and have programme evaluation evidence ready without chasing anyone.",
+    pains: [
+      { title: "Units vary teacher to teacher", body: "Each teacher completes the MYP unit planner differently, so quality and completeness are uneven." },
+      { title: "Articulation is hard to see", body: "Checking concept, ATL and criteria coverage across MYP 1–5 and across subjects means opening dozens of documents." },
+      { title: "Evaluation is a scramble", body: "Collecting sample units, assessment evidence and reflections for programme evaluation eats weeks." },
+    ],
+    blocks: [
+      { label: "Consistent planning", title: "One IB-shaped planner for every teacher", body: "Every unit follows the same MYP structure, with required answers flagged, so plans arrive complete and comparable.", img: "/screens/unit-planner-v2.png", alt: "MYP unit planner" },
+      { label: "Articulation", title: "See coverage across years and subjects", body: "The curriculum map shows how units build vertically across MYP 1–5 and horizontally across subject groups, so gaps and repetition surface early." },
+      { label: "Evidence", title: "Evaluation and accreditation, always ready", body: "Unit plans, assessments and reflections are tagged as evidence as teachers work, and serve IB programme evaluation, CIS and NEASC at once.", bullets: ["Sample units exported as PDF", "Strand-level assessment records", "Crosswalk from IB codes to CIS and NEASC"] },
+    ],
+    faqs: [
+      { q: "Does this add work for teachers?", a: "No. Teachers plan, teach and assess as usual; the evidence builds up in the background." },
+      { q: "Can we start with one subject group?", a: "Yes. Many schools pilot with one group, then expand." },
+    ],
+    related: [{ label: "Accreditation", href: "/accreditation" }, { label: "Unit & lesson planning", href: "/product/unit-planning" }, { label: "IB MYP", href: "/programmes/myp" }],
+  },
+
+  "for-school-leaders": {
+    eyebrow: "For heads of school",
+    lead: "Give your IB teachers one AI-native platform for planning, teaching and assessment, with consistent quality across departments and continuous readiness for evaluation and accreditation.",
+    blocks: [
+      { label: "AI, responsibly", title: "Put AI to work across your school, safely", body: "Cocoon brings AI into planning, lesson design and marking with teachers in control: every output is a draft, marking suggestions show strand-level evidence, and nothing reaches students without approval." },
+      { label: "Consistency", title: "The same standard in every classroom", body: "Shared IB structures for units, lessons and assessment mean quality no longer depends on which teacher or department a student has." },
+      { label: "Readiness", title: "Always ready for IB, CIS and NEASC", body: "Evidence builds up through everyday teaching and maps across frameworks, so evaluation visits and annual updates stop being a scramble." },
+      { label: "Fewer tools", title: "One platform instead of many", body: "Planning, lesson decks, assessment, question banks and evidence in one place, which reduces tool fatigue for teachers and cost for the school." },
+    ],
+    faqs: [
+      { q: "How is student data protected?", a: "See our security page for hosting, access control and how Cocoon AI handles data." },
+      { q: "How do we evaluate Cocoon before committing?", a: "Start with a one-term pilot and review the results with our team." },
+    ],
+    related: [{ label: "Pilot programme", href: "/pilot" }, { label: "Security & privacy", href: "/security" }, { label: "Pricing", href: "/pricing" }],
   },
 };

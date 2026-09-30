@@ -4,9 +4,30 @@ export type NavGroup = { label: string; href?: string; columns?: { title: string
 export const site = {
   name: "Cocoon",
   tagline: "Plan. Teach. Reflect. Inquire.",
-  url: "https://cocoon.edwisely.com",
+  url: "https://cocoon-site-theta.vercel.app",
   pilotSchool: "An IB World School in Hyderabad", // placeholder until approved
 };
+
+export const company = {
+  name: "Edwisely",
+  phone: "+91 79951 61950",
+  emailGeneral: "hello@edwisely.com",
+  emailSales: "ai@edwisely.com",
+  address: { street: "3rd Floor, Trendz Orbit Building, Diamond Hills, Lumbini Avenue", locality: "Gachibowli, Hyderabad", region: "Telangana", postal: "500081", country: "IN", countryName: "India" },
+  mapsQuery: "Edwisely - Intelligent Learning, Trendz Orbit Building, Gachibowli, Hyderabad",
+  social: [
+    { name: "LinkedIn", handle: "linkedin.com/company/edwisely", href: "https://www.linkedin.com/company/edwisely" },
+    { name: "Instagram", handle: "@edwisely_official", href: "https://www.instagram.com/edwisely_official" },
+    { name: "X (Twitter)", handle: "@edwiselyindia", href: "https://x.com/edwiselyindia" },
+  ],
+  offices: [
+    { city: "Hyderabad, India", note: "India enquiries", phone: "+91 99518 85327" },
+    { city: "Chennai, India", note: "South India enquiries", phone: "+91 79951 61950" },
+    { city: "Texas, USA", note: "North America enquiries", phone: "+1 630 699 2954" },
+  ],
+  website: "https://www.edwisely.com",
+};
+export const tel = (p: string) => "tel:" + p.replace(/\s/g, "");
 
 export const nav: NavGroup[] = [
   {
@@ -38,12 +59,19 @@ export const nav: NavGroup[] = [
         title: "IB programmes",
         links: [
           { label: "IB MYP", href: "/programmes/myp", desc: "Criteria, ATL, global contexts" },
-          { label: "IB DP", href: "/programmes/dp", desc: "IA, EE, TOK and exam readiness" },
+          { label: "IB DP", href: "/programmes/dp", desc: "IA, EE and syllabus coverage" },
+          { label: "Accreditation", href: "/accreditation", desc: "IB, CIS and NEASC evidence" },
+        ],
+      },
+      {
+        title: "By role",
+        links: [
+          { label: "For coordinators", href: "/for-coordinators", desc: "Consistency, articulation, evaluation" },
+          { label: "For school leaders", href: "/for-school-leaders", desc: "AI, quality and readiness school-wide" },
         ],
       },
     ],
   },
-  { label: "Accreditation", href: "/accreditation" },
   {
     label: "Resources",
     columns: [
@@ -64,6 +92,7 @@ export const nav: NavGroup[] = [
     ],
   },
   { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const footer: { title: string; links: NavLink[] }[] = [
@@ -72,13 +101,13 @@ export const footer: { title: string; links: NavLink[] }[] = [
     { label: "Teach", href: "/product/teach" }, { label: "Assessment", href: "/product/assessment" },
     { label: "Cocoon AI", href: "/product/ai" }, { label: "Pricing", href: "/pricing" } ] },
   { title: "Programmes", links: [
-    { label: "IB MYP", href: "/programmes/myp" }, { label: "IB DP", href: "/programmes/dp" },
+    { label: "IB MYP", href: "/programmes/myp" }, { label: "IB DP", href: "/programmes/dp" }, { label: "For coordinators", href: "/for-coordinators" }, { label: "For school leaders", href: "/for-school-leaders" },
     { label: "Accreditation", href: "/accreditation" } ] },
   { title: "Resources", links: [
     { label: "Resource hub", href: "/resources" }, { label: "Pilot", href: "/pilot" },
     { label: "Why Cocoon", href: "/why-cocoon" }, { label: "Switching", href: "/switching" } ] },
   { title: "Company", links: [
-    { label: "About", href: "/about" }, { label: "Security", href: "/security" },
+    { label: "About", href: "/about" }, { label: "Contact", href: "/contact" }, { label: "Security", href: "/security" },
     { label: "Privacy", href: "/privacy" }, { label: "Terms", href: "/terms" }, { label: "Book a demo", href: "/demo" } ] },
 ];
 
@@ -94,9 +123,10 @@ export const pages: PageDef[] = [
   { slug: ["programmes","myp"], title: "IB MYP Software for Teachers", h1: "Built for the MYP classroom", description: "Criteria, command terms, global contexts and ATL built into every plan and assessment.", keyword: "IB MYP software", sections: ["Hero", "MYP pains", "Features mapped", "FAQ", "CTA"] },
   { slug: ["programmes","dp"], title: "IB DP Software for Teachers", h1: "Built for the Diploma Programme", description: "Plan DP units, supervise IA and EE, and prepare students for exams.", keyword: "IB DP software", sections: ["Hero", "DP pains", "Features mapped", "FAQ", "CTA"] },
   { slug: ["accreditation"], title: "IB, CIS & NEASC Accreditation Evidence Software", h1: "Tag once, comply everywhere", description: "Turn everyday teaching artefacts into IB, CIS and NEASC evidence automatically.", keyword: "IB programme evaluation evidence software", sections: ["Hero", "The evidence problem", "Crosswalk", "Coordinator cockpit", "FAQ", "CTA"] },
+  { slug: ["for-coordinators"], title: "Cocoon for MYP & DP Coordinators", h1: "Programme oversight without the chasing", description: "Consistent unit planning, vertical and horizontal articulation, and evaluation evidence for IB coordinators.", keyword: "MYP coordinator tools", sections: [] },
+  { slug: ["for-school-leaders"], title: "Cocoon for Heads of IB Schools", h1: "AI-native teaching, school-wide", description: "Consistent IB teaching quality, responsible AI and continuous accreditation readiness for school leaders.", keyword: "AI platform for IB schools", sections: [] },
   { slug: ["why-cocoon"], title: "Why Cocoon: The IB-Only Teaching Platform", h1: "Built only for IB, not adapted for it", description: "Why MYP and DP schools choose an IB-native platform over a general school LMS.", keyword: "best platform for IB teachers", sections: ["Summary", "IB-native vs general LMS", "Who Cocoon suits", "CTA"] },
   { slug: ["switching"], title: "Switching to Cocoon from Your Current LMS", h1: "Switching is simpler than you think", description: "How we help IB schools move unit plans, question banks and classes to Cocoon.", keyword: "switch IB LMS", sections: ["Migration steps", "What we move for you", "Timeline", "CTA"] },
-  { slug: ["resources"], title: "IB MYP & DP Teacher Resources", h1: "Resources for IB teachers", description: "Guides, templates and explainers for MYP and DP teachers and coordinators.", keyword: "IB teacher resources", sections: ["Featured", "MYP guides", "DP guides", "Templates"] },
   { slug: ["pilot"], title: "Cocoon Pilot Programme for IB Schools", h1: "Join the Cocoon pilot", description: "See how IB schools are piloting Cocoon, and how yours can join.", keyword: "IB school pilot programme", sections: ["Pilot story", "Results", "How to join", "CTA"] },
   { slug: ["about"], title: "About Cocoon by Edwisely", h1: "About Cocoon", description: "Cocoon is built by Edwisely for IB educators.", keyword: "Cocoon Edwisely", sections: ["Mission", "Team", "Contact"] },
   { slug: ["security"], title: "Security & Data Privacy", h1: "Your school's data, protected", description: "Hosting, access control, GDPR and how Cocoon AI uses data.", keyword: "IB LMS data privacy", sections: ["Hosting", "Access control", "GDPR", "AI data policy"] },

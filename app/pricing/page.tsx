@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTA from "@/components/sections/CTA";
-export const metadata: Metadata = { title: "Pricing", description: "Cocoon plans for IB schools. Talk to us for a quote based on your programmes and size.", alternates: { canonical: "/pricing" } };
+export const metadata: Metadata = { title: "Pricing", description: "Cocoon plans for IB schools. Talk to us for a quote based on your programmes and size.", openGraph: { images: ["/og?title=Plans%20that%20fit%20your%20IB%20school"] }, alternates: { canonical: "/pricing" } };
 
 const tiers = [
   { name: "Plan", for: "For teams starting with planning", items: ["Inquiry Hooks", "PPT Engine", "Unit & lesson planning", "IB reference library"] },
   { name: "Teach & Assess", for: "For a complete MYP/DP teaching workflow", items: ["Everything in Plan", "Teach Studio + room pulse", "Objective & subjective assessment", "Criterion-based AI marking", "Reports"], featured: true },
-  { name: "Whole school", for: "For coordinators and leadership", items: ["Everything in Teach & Assess", "Accreditation evidence (IB, CIS, NEASC)", "Coordinator dashboards", "Onboarding & training", "Priority support"] },
+  { name: "Whole school", for: "For coordinators and leadership", items: ["Everything in Teach & Assess", "Accreditation evidence (IB, CIS, NEASC)", "Curriculum map across MYP 1–5", "Onboarding & training", "Priority support"] },
 ];
 
 export default function Pricing() {

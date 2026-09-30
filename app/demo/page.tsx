@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import DemoForm from "./DemoForm";
-export const metadata: Metadata = { title: "Book a demo", description: "See Cocoon in action. Book a 30-minute walkthrough with an IB educator.", alternates: { canonical: "/demo" } };
+export const metadata: Metadata = { title: "Book a demo", description: "See Cocoon in action. Book a 30-minute walkthrough with an IB educator.", openGraph: { images: ["/og?title=See%20Cocoon%20in%20action"] }, alternates: { canonical: "/demo" } };
 
 export default function Demo() {
   return (

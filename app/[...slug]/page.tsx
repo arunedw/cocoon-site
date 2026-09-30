@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { pages } from "@/lib/site";
+import { pages, site } from "@/lib/site";
 import { content } from "@/lib/content";
 import Placeholder from "@/components/sections/Placeholder";
 import CTA from "@/components/sections/CTA";
@@ -17,7 +17,8 @@ export const dynamicParams = false;
 
 export function generateMetadata({ params }: { params: { slug: string[] } }): Metadata {
   const p = find(params.slug); if (!p) return {};
-  return { title: p.title, description: p.description, alternates: { canonical: "/" + p.slug.join("/") }, openGraph: { title: p.title, description: p.description } };
+  const ready = !!content[p.slug.join("/")];
+  return { title: p.title, description: p.description, alternates: { canonical: "/" + p.slug.join("/") }, openGraph: { title: p.title, description: p.description, url: "/" + p.slug.join("/"), images: [`/og?title=${encodeURIComponent(p.h1)}`] }, robots: ready ? undefined : { index: false, follow: true } };
 }
 
 export default function Page({ params }: { params: { slug: string[] } }) {
@@ -39,7 +40,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const crumbs = [{ name: "Home", url: "/" }, ...p.slug.map((_, i) => ({ name: p.slug[i], url: "/" + p.slug.slice(0, i + 1).join("/") }))];
   const ld = [
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: b.url })) },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: site.url + (b.url === "/" ? "" : b.url) })) },
   ];
 
   return (
@@ -55,7 +56,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
           <Link href="/demo" className="btn-primary">Book a demo</Link>
           <Link href="/pricing" className="btn-ghost">See plans</Link>
         </div>
-        {c.heroImg && <div className="card mt-12 overflow-hidden p-2 shadow-xl"><Image src={c.heroImg} alt={c.heroAlt ?? ""} {...IMG} className="rounded-xl" quality={90} sizes="(min-width: 1440px) 1360px, 100vw" priority /></div>}
+        {c.heroImg && <div className="card mt-12 overflow-hidden p-2 shadow-xl"><Image src={c.heroImg} alt={c.heroAlt ?? ""} {...IMG} className="rounded-xl" quality={80} sizes="(min-width: 1440px) 1360px, 100vw" priority /></div>}
       </section>
 
       {c.pains && (
@@ -78,7 +79,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
               <p className="mt-4 text-muted">{b.body}</p>
               {b.bullets && <ul className="mt-5 space-y-2 text-base">{b.bullets.map((x) => <li key={x} className="flex gap-2"><span className="text-navy">✓</span>{x}</li>)}</ul>}
             </div>
-            {b.img && <div className="card overflow-hidden p-2"><Image src={b.img} alt={b.alt ?? ""} {...IMG} className="rounded-xl" quality={90} sizes="(min-width: 768px) 50vw, 100vw" /></div>}
+            {b.img && <div className="card overflow-hidden p-2"><Image src={b.img} alt={b.alt ?? ""} {...IMG} className="rounded-xl" quality={80} sizes="(min-width: 768px) 50vw, 100vw" /></div>}
           </div>
         ))}
       </section>
